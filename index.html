@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>My Library 📚</h1>
+                <p>Your personal reading space</p>
+            </div>
+
+            <button id="new-book-btn">+ Add New Book</button>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="welcome">
+            <h2>Your Collection</h2>
+            <p>Keep track of the books you love and the stories waiting for you.</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <h3 id="total-books">0</h3>
+                <p>Total Books</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="read-books">0</h3>
+                <p>Books Read</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="unread-books">0</h3>
+                <p>Still Reading</p>
+            </div>
+        </section>
+
+        <section id="book-container" class="book-container">
+        </section>
+
+    </main>
+
+    <!-- New Book Dialog -->
+
+    <dialog id="book-dialog">
+
+        <div class="dialog-header">
+            <h2>Add a New Book</h2>
+            <button id="close-dialog" class="close-btn">&times;</button>
+        </div>
+
+        <form id="book-form">
+
+            <label for="title">Book Title</label>
+            <input
+                type="text"
+                id="title"
+                placeholder="Enter book title"
+                required
+            >
+
+            <label for="author">Author</label>
+            <input
+                type="text"
+                id="author"
+                placeholder="Enter author name"
+                required
+            >
+
+            <label for="pages">Number of Pages</label>
+            <input
+                type="number"
+                id="pages"
+                placeholder="e.g. 250"
+                min="1"
+                required
+            >
+
+            <label class="checkbox-label">
+                <input type="checkbox" id="read">
+                I have already read this book
+            </label>
+
+            <button type="submit" class="submit-btn">
+                Add to My Library
+            </button>
+
+        </form>
+
+    </dialog>
+
+</body>
+</html>
